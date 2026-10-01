@@ -1,0 +1,25 @@
+From: "Service Sécurité Amazon" <security@amaz0n-verify.ru>
+Reply-To: noreply@amaz0n-verify.ru
+Return-Path: <bounce@spamhost.xyz>
+To: victim@example.com
+Subject: [URGENT] Votre compte Amazon sera suspendu dans 24h
+Date: Mon, 05 May 2026 08:42:00 +0000
+Message-ID: <abc123@spamhost.xyz>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Received-SPF: fail (domain amaz0n-verify.ru does not designate spamhost.xyz as permitted sender)
+
+Cher(e) client(e),
+
+Nous avons détecté une activité inhabituelle sur votre compte Amazon.
+Pour éviter la suspension définitive de votre compte, vous devez vérifier
+vos informations de paiement IMMÉDIATEMENT.
+
+Cliquez sur le lien ci-dessous pour sécuriser votre compte :
+https://amazon-account-verify-login.amaz0n-verify.ru/secure?token=xK92mP
+
+ATTENTION : Si vous ne confirmez pas votre compte dans les 24 heures,
+il sera définitivement suspendu et vous perdrez l'accès à toutes vos commandes.
+
+Cordialement,
+L'équipe de sécurité Amazon

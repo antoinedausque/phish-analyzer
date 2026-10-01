@@ -1,0 +1,968 @@
+[
+  {
+    "file": "dataset/emails/phishing_spoofing_001.eml",
+    "true_label": "malveillant",
+    "phishing_type": "spoofing",
+    "description": "Usurpation Apple Support, SPF fail, domaine typosquatté apple-securite.net"
+  },
+  {
+    "file": "dataset/emails/phishing_spoofing_002.eml",
+    "true_label": "malveillant",
+    "phishing_type": "spoofing",
+    "description": "Usurpation Société Générale, SPF fail, faux domaine, urgence virement"
+  },
+  {
+    "file": "dataset/emails/phishing_urgence_001.eml",
+    "true_label": "malveillant",
+    "phishing_type": "urgence",
+    "description": "Fausse communication RH, mise à jour IBAN sous menace de non-versement du salaire"
+  },
+  {
+    "file": "dataset/emails/phishing_urgence_002.eml",
+    "true_label": "malveillant",
+    "phishing_type": "urgence",
+    "description": "Faux Chronopost, frais de douane fictifs 2,99€, SPF fail"
+  },
+  {
+    "file": "dataset/emails/phishing_spear_001.eml",
+    "true_label": "malveillant",
+    "phishing_type": "spear_phishing",
+    "description": "BEC / fraude au président, virement 47 500€, Reply-To Gmail personnel, confidentialité imposée"
+  },
+  {
+    "file": "dataset/emails/phishing_spear_002.eml",
+    "true_label": "malveillant",
+    "phishing_type": "spear_phishing",
+    "description": "Faux helpdesk IT ciblé par prénom, réinitialisation mot de passe M365, domaine suspect"
+  },
+  {
+    "file": "dataset/emails/phishing_url_001.eml",
+    "true_label": "malveillant",
+    "phishing_type": "url_malveillante",
+    "description": "Usurpation Netflix, SPF fail, domaine netflix-billing.info, lien de réactivation frauduleux"
+  },
+  {
+    "file": "dataset/emails/phishing_url_002.eml",
+    "true_label": "malveillant",
+    "phishing_type": "url_malveillante",
+    "description": "Usurpation Ameli, Return-Path russe, remboursement fictif 87,40€, collecte IBAN"
+  },
+  {
+    "file": "dataset/emails/legitime_newsletter_001.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "Newsletter Le Monde, SPF/DKIM/DMARC pass, domaine officiel, contenu éditorial sans action urgente"
+  },
+  {
+    "file": "dataset/emails/legitime_facture_001.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "Facture OVHcloud, SPF/DKIM/DMARC pass, domaine officiel, montant et références cohérents"
+  },
+  {
+    "file": "dataset/emails/legitime_interne_001.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "Email interne entreprise, SPF/DKIM pass, contenu opérationnel neutre sans lien suspect"
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_4ac371ae7e.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: \"eBay\" <aw-confirm@ebay.com> | Sujet: Update account information"
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_6bb4a180df.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: \"eBay\" <eBay@reply3.ebay.com> | Sujet: Buy the best brands on eBay, without paying a fortune"
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_8ac8806dfe.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: PayPal <aw-confirm@paypal.com> | Sujet: Account compromised: billing information moved or changed."
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_7714cd25b7.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: eBay <aw-confirm@ebay.com> | Sujet: Final Notification of Fraudulent Account"
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_86b8fc813d.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: service@paypal.com <service@paypal.com> | Sujet: PayPal Notification: Account Review"
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_0698f78738.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: \"eBay Security Service\" <security@eBay.com> | Sujet: WARNING: Security Issues"
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_c9e6594f55.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: \"eBay Billing Dep\" <aw-confirm@eBay.com> | Sujet: youe eBay account could be suspended due Updates."
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_750f73847f.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: \"PayPal Security Service\" <security@paypal.com> | Sujet: *** Warning: Security Issues ***"
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_579cc00689.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: \"Gracie Cayuga\" <avitalGregoryFMQ4728@comnet.com> | Sujet: eBay Bid Confirmed: Item Number 8437190942"
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_1276ff5b39.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: \"PayPal\" <support@paypal.com> | Sujet: PayPal Flagged Account"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_0db0f6a290.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: Matthias Saou <matthias@rpmforge.net> | Sujet: Re: alsa-driver.spec tweak for homemade kernels"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_fef3d6cf2b.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: gamasutra <rssfeeds@spamassassin.taint.org> | Sujet: The Analyst Primer"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_6a28a8036c.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: Chris Garrigues <cwg-exmh@DeepEddy.Com> | Sujet: Re: New Sequences Window"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_c8e69c95f1.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: Joe Berry <joe@topshot.com> | Sujet: [Razor-users] Reducing impact from tons of email"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_f940b2556a.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: Chris Garrigues <cwg-exmh@DeepEddy.Com> | Sujet: I'm back in town..."
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_a7bdd7ab83.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: Valdis.Kletnieks@vt.edu | Sujet: Re: exmh bug?"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_a0c990c05a.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: Harri Haataja <harri.haataja@cs.Helsinki.FI> | Sujet: Re: http://apt.nixia.no/"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_66fcbf8a9a.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: Robin Lynn Frank <rlfrank@paradigm-omega.com> | Sujet: Re: patent on TMDA-like system"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_0797f9cd38.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: \"RossO\" <fork@ordersomewherechaos.com> | Sujet: Re: Computational Recreations"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_e17995fb94.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: Troy Engel <tengel@fluid.com> | Sujet: latest php upgrade in 7.3"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_c679a01121.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: \"Geege Schuman\" <geege@barrera.org> | Sujet: Recommended Viewing"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_71ce6c7ac6.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: guardian <rssfeeds@spamassassin.taint.org> | Sujet: A nation searches its soul"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_ac01a90c72.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: Thomas Vander Stichele <thomas@urgent.rug.ac.be> | Sujet: hi"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_03c3dbd506.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: bugzilla-daemon@hughes-family.org | Sujet: [SAdev] [Bug 779] rule broken: CORRUPT_MSGID"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_0826f8955d.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: Crispin Cowan <crispin@wirex.com> | Sujet: Re: FW: use of base image / delta image for automated recove"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_b266472888.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: anthony@interlink.com.au (Anthony Baxter) | Sujet: [Spambayes] understanding high false negative rate "
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_06fa696cc8.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: Matthias Saou <matthias@egwn.net> | Sujet: Holidays for freshrpms.net :-)"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_ac64db9f2d.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: Gregory Alan Bolcer <gbolcer@endeavors.com> | Sujet: buffer overflows"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_302d706746.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: Jordan Ritter <jpr5@darkridge.com> | Sujet: Re: [Razor-users] Fire.cloudmark.com is having issues"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_87cb7f0052.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: guardian <rssfeeds@spamassassin.taint.org> | Sujet: Two in court on IRA spy charges"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_a4c8ecdb05.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: guardian <rssfeeds@spamassassin.taint.org> | Sujet: Monkey or man?"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_c22ef31fac.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: Daniel Quinlan <quinlan@pathname.com> | Sujet: Re: [SAdev] testing with less rules"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_eceda0b266.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: diveintomark <rssfeeds@spamassassin.taint.org> | Sujet: Colophon 1"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_91a3dd1f60.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: Gary Lawrence Murphy <garym@canada.com> | Sujet: Re: earthviewer (was Re: whoa}"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_91f914416b.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: fark <rssfeeds@spamassassin.taint.org> | Sujet: Freak breaks world record by clipping 153 clothespins on his"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_ccaf5d9993.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: neale@woozle.org (Neale Pickett) | Sujet: [Spambayes] Ditching WordInfo"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_a66a5b8f89.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: ThosStew@aol.com | Sujet: Re: liberal defnitions"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_d17d927bc3.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: J C Lawrence <claw@kanga.nu> | Sujet: Re: Sorting"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_2a608c444a.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: Tom <tomwhore@slack.net> | Sujet: The GOv gets tough on Net Users.....er Pirates.."
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_a0aa119d1f.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: fark <rssfeeds@spamassassin.taint.org> | Sujet: Bush orders Sharon to obey UN resolutions so US can gather\n "
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_3861888c78.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: diveintomark <rssfeeds@spamassassin.taint.org> | Sujet: My Good Easy"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_d971994c56.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: Harri Haataja <harri.haataja@cs.helsinki.fi> | Sujet: REQ: Beast/BSE"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_8a223af020.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: nas@python.ca (Neil Schemenauer) | Sujet: [Spambayes] all but one testing"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_1ef8ef5443.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: Owen Byrne <owen@permafrost.net> | Sujet: Re: sed /s/United States/Roman Empire/g"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_6ca18bf6eb.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: \"Tony L. Svanstrom\" <tony@svanstrom.com> | Sujet: Re: [SAtalk] Re: patent on TMDA-like system"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_bcb70aab4c.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: \"John Evdemon\" <jevdemon@acm.org> | Sujet: Re: Entrepreneurs"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_edc0843e0d.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: Gary Lawrence Murphy <garym@canada.com> | Sujet: Re: flavor cystals"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_4ab4d7caed.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: boingboing <rssfeeds@spamassassin.taint.org> | Sujet: Dan Gillmor responds to Jack Valenti"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_5412c65e9e.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: anthony@interlink.com.au (Anthony Baxter) | Sujet: [Spambayes] understanding high false negative rate "
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_a97bc8c76b.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: Matthias Saou <matthias@rpmforge.net> | Sujet: Re: xine src package"
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_431b30be94.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: \"Amazon\" <service@amazon.com> | Sujet: Amazon.com Inquiry"
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_58a1afe793.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: NCUA <acc-validity@ncua.gov> | Sujet: System maintenance: update your Federal Credit Union"
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_69c18718bd.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: Dan Nicholson <noreply@impr-mx.com> | Sujet: Un-secured Gold Visa Card"
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_702164c591.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: \"service\" <service@paypal.com> | Sujet: PayPal Account (KMN15704117V21843L9KM)"
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_8948d4d7de.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: service@amazon.com <service@amazon.com> | Sujet: Reactivate Your Account!"
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_b305ec0029.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: <updafn@ebay.com> | Sujet: Protect yourself from Spoof (fake) e-mailsrg"
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_7cdd6ae52f.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: \"Commercial Federal Bank\" <services@comfedbank.com> | Sujet: IMPORTANT NOTICE: Please update your AccessOnline® Account"
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_afab0800c3.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: PayPal <acc-validity@paypal.com> | Sujet: Account compromised: billing information moved or changed."
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_715cdfb63e.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: \"Credit Union\" <acc-validity@ncua.gov> | Sujet: [*** POSIBLE SPAM***] Please Update Your Account Information"
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_2ab747a3b3.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: \"support@paypal.com\" <support@paypal.com> | Sujet: Update your paypal account"
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_e5ed602303.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: \"Federal Credit Union\" <new@pellin.us> | Sujet: Credit Unions Banks Update"
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_60f8b11d10.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: eBay Security Department <security@ebay.com> | Sujet: Account Security Measures!"
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_965d4c845e.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: update@chase.com <update@chase.com> | Sujet: Update and Verify Your Account "
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_17206461bb.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: \"James99fb \" <\"\"@eBay.com> | Sujet: eBay.com Security Alteration Insecure - msgid; ue2"
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_6786b0dd52.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: \"SecurityCenter@ebay.com\" <SecurityCenter@ebay.com> | Sujet: FPA NOTICE: eBay Account Suspension - Please review your acc"
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_137cb0086e.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: Support PayPal <support-team@paypal.com> | Sujet: PayPal Security Departmen   confirmation code  15-RYAAG"
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_b2b0f15e28.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: \"Sky Bank \" <security@skyfi.com> | Sujet: Your Account Was Hijacked !"
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_566b630088.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: \"eBay Security Department\" <confirm@ebay.com> | Sujet: Confirm your eBay account"
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_51d9592ce3.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: \"Amazon Customer Support\" <noreply@amazon.com> | Sujet: Update your account information to avoid suspension."
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_db06d57a1f.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: \"Tinker Federal Credit Union\" <service@tinkerfcu.org> | Sujet: Your Tinker Federal Credit Union Account Must To Be Updated!"
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_609057e2c3.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: Deutsche Postbank Unterstutzung <Kontounterstutzung-19@postb | Sujet: Identifizierung des Kunden von der Postbank.  [Ref:451]"
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_a27441914d.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: Credit Union 1 <member.support@creditunion1.org> | Sujet: Credit Union 1 Members Update Aplication"
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_853daf0fd9.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: \"update@paypal.com\" <service@paypal.com> | Sujet: Verify Your PayPal account***"
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_d6394a0186.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: \"eBay Billing Dep\" <aw-confirm@eBay.com> | Sujet: youe eBay account could be suspended due Updates."
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_9284d6b0f8.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: \"Chase Bank\" <service@chase.com> | Sujet: Bank Update"
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_0c0bcfb802.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: paypal@email.paypal.com <paypal@email.paypal.com> | Sujet: Verify Your PayPal© Account"
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_648bc330f0.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: SouthTrust Bank <support_num_88907397@southtrust.com> | Sujet: SouthTrust Bank: Please Validate Your Account [Mon, 11 Jul 2"
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_5121b433f6.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: \"Amazon\" <service@amazon.com> | Sujet: Revision to Your Amazon.com Information "
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_1d9b4ebfbf.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: Paypal <accounts@email.paypal.com> | Sujet: Monthly Update: October 2005 (Require User Verification)"
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_77161292cc.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: update@amazon.com <update@amazon.com> | Sujet: Please Update Your Amazon Account !"
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_1575a75847.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: \"Amazon Customer Support\" <account-update@amazon.com> | Sujet: IMPORTANT NOTICE:Managed Protection Account."
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_a48202db17.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: \"service@intl.paypal.com\" <service@intl.paypal.com> | Sujet: New email address added to your PayPal account "
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_c215afc438.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: eBay <aw-confirm@ebay.com> | Sujet: Account Notice - Suspicous Activity"
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_422969cda3.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: <service@eBay.com> | Sujet: Security Validation -- Respond Now"
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_75e4db05c5.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: update@amazon.com <update@amazon.com> | Sujet: Please Update Your Amazon Account !"
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_61aa46dafb.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: \"Account Service\" <service@paypal.com> | Sujet: Verify your PayPal Account"
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_3e0742721f.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: \"Amazon\" <service@amazon.com> | Sujet: Amazon.com Inquiry"
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_07fd5d06ff.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: \"Commercial Federal Bank\" <services@comfedbank.com> | Sujet: IMPORTANT NOTICE: Please update your AccessOnline® Account"
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_9e55bf9ea8.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: payments-messages@amazon.com | Sujet: Amazon Payments Billing Issue - beth@monkey.org"
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_5e8432579b.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: \"Paypal\" <service@paypal.com> | Sujet: Your Account with PayPal"
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_cb45e89d1c.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: Lasalle Bank <unlock@lasallebank.com> | Sujet: Unlock your ACCOUNT"
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_4120a0b254.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: Brian Ferguson <bjf10@ee.washington.edu> | Sujet: [Fwd: Update and Verify Your PayPal account***]"
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_c1f4ef83a3.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: \"support eBay\" <onlineteam@eaby.com> | Sujet: Important system update conformation code ¹034-JJPCY"
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_72466973df.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: support@eBay.com | Sujet: Account Verification"
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_d2077ee67d.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: Key Team <support@keybank.com> | Sujet: KeyBank Customer Confirm Your Identity"
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_a3544edc88.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: security@chase.com <security@chase.com> | Sujet: Update and verify your Chase Manhatan account"
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_ace2315b41.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: \"Amazon Customer Support\" <noreply@amazon.com> | Sujet: Update your account information to avoid suspension."
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_3c79f210c5.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: PayPal <acc-validity@paypal.com> | Sujet: Account compromised: billing information moved or changed."
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_c870a3a64d.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: \"aw-confirm@paypal.com\" <aw-confirm@paypal.com> | Sujet: ***Urgent Fraud Prevention Group Notice***"
+  },
+  {
+    "file": "dataset/emails/nazario_phishing_351e707607.eml",
+    "true_label": "malveillant",
+    "phishing_type": "nazario",
+    "description": "Corpus Nazario — From: \"Lenny Edwards\" <edwardstw@ebay.com> | Sujet: Ebay Account Issue    1d"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_a5462ed214.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: \"Russell Turpin\" <deafbox@hotmail.com> | Sujet: Re: Selling Wedded Bliss (was Re: Ouch...)"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_bb0a2947e2.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: \"Terry W. Colvin\" <fortean1@mindspring.com> | Sujet: [zzzzteana] FWD [UASR][TheHickmanReport] Jets Attempt to Int"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_abbd4388dd.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: Vipul Ved Prakash <mail@vipul.net> | Sujet: [Razor-users] honor is not in csl"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_fb66a47e2c.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: newscientist <rssfeeds@spamassassin.taint.org> | Sujet: Contact lenses 'boost sexual success'"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_42476034d9.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: newscientist <rssfeeds@spamassassin.taint.org> | Sujet: Fatal seal epidemic burns out"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_7f77f1f693.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: QuaffA Pint <quaffapint@clippersoft.net> | Sujet: Xine dependencies"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_5c1b441bfa.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: ask <rssfeeds@spamassassin.taint.org> | Sujet: Apple Switch parodies"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_58cf163059.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: \"Breathnach, Proinnsias (Dublin)\" <breatpro@exchange.ie.ml.c | Sujet: RE: [ILUG] cheap linux PCs"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_0a38cc5e38.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: guardian <rssfeeds@spamassassin.taint.org> | Sujet: Tory leader risks all on 80s revival"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_91d05f19cb.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: fark <rssfeeds@spamassassin.taint.org> | Sujet: Gambler wins �7,000 - and spends it all on horse shiat"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_1aa785316b.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: CDale <cdale@techmonkeys.net> | Sujet: Re[2]: Selling Wedded Bliss (was Re: Ouch...)"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_44b6389706.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: scripting <rssfeeds@spamassassin.taint.org> | Sujet: Great email from the RIAA's Hillary Rosen to execs at Yahoo,"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_5166fd240e.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: newscientist <rssfeeds@spamassassin.taint.org> | Sujet: Warplane system 'could stop mid-air explosions'"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_4b9a5e39b7.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: Justin Mason <yyyyason@users.sourceforge.net> | Sujet: [SACVS] CVS: spamassassin configure,1.1.2.1,1.1.2.2\n    conf"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_bd14459c10.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: bitbitch@magnesium.net | Sujet: Re[2]: Java is for kiddies"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_48466acf2b.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: Loren Coleman <lcolema1@maine.rr.com> | Sujet: [zzzzteana] Ray Wallace"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_0c3c113d87.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: fark <rssfeeds@spamassassin.taint.org> | Sujet: Man's leg is found 7 miles from a hit and run accident"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_62cf0a5243.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: \"John Hall\" <johnhall@evergo.net> | Sujet: RE: liberal defnitions"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_53e99ac5ca.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: guardian <rssfeeds@spamassassin.taint.org> | Sujet: The Blair message: be bold"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_69cdde23c1.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: \"Martin Adamson\" <martin@srv0.ems.ed.ac.uk> | Sujet: [zzzzteana] University boom creates era of sexual tolerance"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_c1bf38fd8e.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: \"Tim Chapman\" <timc@2ubh.com> | Sujet: Re: [zzzzteana] The Cafe Forteana is back online!!!"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_285a526507.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: boingboing <rssfeeds@spamassassin.taint.org> | Sujet: A&L Daily to be auctioned in bankruptcy"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_1fa6016f22.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: Justin Shore <listuser@neo.pittstate.edu> | Sujet: Re: [SAtalk] Highest-scoring false positive"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_d8bad30d39.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: Tom <tomwhore@slack.net> | Sujet: Re: CD player UI for toddlers"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_ef99ad620a.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: CDale <cdale@techmonkeys.net> | Sujet: AmeriCorpsVISTA"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_588fb87f42.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: Tom <tomwhore@slack.net> | Sujet: Re: 2002.06.00.00"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_ab86a9af9b.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: Hussein Kanji <hussein@stanfordalumni.org> | Sujet: RE: sprint delivers the next big thing??"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_2ec56e47b5.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: Bernard Michael Tyers <bernard.tyers@dcu.ie> | Sujet: [IIU] Eircom aDSL Nat'ing"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_8aa7156519.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: zawodny <rssfeeds@spamassassin.taint.org> | Sujet: The Boston Globe on Linux and OS X"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_bcd4fcc5ff.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: Bill Humphries <bill@whump.com> | Sujet: Re: EBusiness Webforms: cluetrain has left the station"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_b6a06b89f6.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: \"John Hall\" <johnhall@evergo.net> | Sujet: RE: Slaughter in the Name of God"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_a840bf9869.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: Hal DeVore <haldevore@acm.org> | Sujet: Re: Bindings problem with current CVS code"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_2f7f8ee783.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: boingboing <rssfeeds@spamassassin.taint.org> | Sujet: If it's too loud, you're too French"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_84766fe7f3.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: newscientist <rssfeeds@spamassassin.taint.org> | Sujet: Food 'cancer chemical' reaction identified"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_44dab08d72.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: pudge@perl.org | Sujet: [use Perl] Headlines for 2002-09-24"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_a2ede62094.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: Andy <andy@r2-dvd.org> | Sujet: [zzzzteana] Betamax finally laid to rest"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_682ddcfdf0.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: tim.one@comcast.net (Tim Peters) | Sujet: [Spambayes] Deployment"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_59dc045aba.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: Roi Dayan <dejavo@punkass.com> | Sujet: Re: xmms and .mp3 files."
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_728aabed48.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: boingboing <rssfeeds@spamassassin.taint.org> | Sujet: Don't do the brown WiFi, the brown WiFi is BAD"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_c1ef4786af.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: \"Russell Turpin\" <deafbox@hotmail.com> | Sujet: Re: How unlucky can you get?"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_a01c4175c4.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: tim.one@comcast.net (Tim Peters) | Sujet: [Spambayes] understanding high false negative rate"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_a42e35a287.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: \"Tim Chapman\" <timc@2ubh.com> | Sujet: [zzzzteana] The new Steve Earle"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_518eaca2f1.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: Toorop <toorop@cyborgnation.org> | Sujet: [Razor-users] Exit.status =13 ?"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_9010074497.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: scripting <rssfeeds@spamassassin.taint.org> | Sujet: A productive thread"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_d4fdc7076f.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: Rodent of Unusual Size <Ken.Coar@Golux.Com> | Sujet: Re: Internet radio - example from a college station"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_7315bb58a5.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: \"Govind S. Salinas\" <govind@theshadows.darktech.org> | Sujet: apt-get http fails"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_b59d0cff87.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: Tom <tomwhore@slack.net> | Sujet: Re: AA Meetings the Hottest Place to Meet Women With Big Buc"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_32625770d2.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: barry@python.org (Barry A. Warsaw) | Sujet: [Spambayes] Deployment"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_50b4f54a4b.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: bitbitch@magnesium.net | Sujet: Re: revocation of grlygrl201@"
+  },
+  {
+    "file": "dataset/emails/spamassassin_ham_4e443a6a9e.eml",
+    "true_label": "légitime",
+    "phishing_type": "légitime",
+    "description": "SpamAssassin easy_ham — From: \"Adam L. Beberg\" <beberg@mithral.com> | Sujet: Tech's Major Decline"
+  }
+]
